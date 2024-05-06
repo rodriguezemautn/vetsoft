@@ -1,0 +1,33 @@
+#Crear docker-compose.yml
+ version: '3.8' #Versión de docker-compose
+ services:
+   vetsoft:  #Nombre del servicio
+     build: . #Dockerfile en el mismo directorio construye la imagen
+     ports:
+       - "8002:8000" #Puerto de la aplicación
+     volumes: 
+       - .:/vetsoft  #Volumen persistente
+     restart: always #Reinicia el contenedor si se detiene
+
+#Comando para correr el contenedor con docker-compose
+#docker-compose up -d
+#Comando para detener el contenedor con docker-compose
+#docker-compose down
+#Comando para ver los contenedores con docker-compose
+#docker-compose ps
+
+
+
+# Creamos un docker-compose.yml para imagen vetsoft-ema:1.0 con un volumen persistente, puerto 8000 y sqlite3 
+# Comando para correr el contenedor con docker-compose
+# version: '3.8'
+# services:
+#   vetsoft:
+#     image: vetsoft-ema:1.0
+#     ports:
+#       - "8000:8000"
+#     volumes:  
+#       - .:/vetsoft
+#     command: python manage.py runserver
+#     command: python manage.py migrate
+#     restart: always

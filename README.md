@@ -35,3 +35,13 @@ Aplicación web para veterinarias utilizada en la cursada 2024 de Ingeniería y 
 
 ### Comando para detener el contenedor
 `docker stop <container_id>`
+
+## Desplegar contenedor
+### Comando para correr el contenedor con docker-compose
+`docker-compose up -d`
+
+###Comando para detener el contenedor con docker-compose
+`docker-compose down`
+
+###Comando para ver los contenedores con docker-compose
+`docker-compose ps`
