@@ -55,32 +55,3 @@ RUN python manage.py migrate
 # docker network rm <network_id>
 
 
-
-# Creamos un docker-compose.yml para imagen vetsoft-ema:1.0 con un volumen persistente, puerto 8000 y sqlite3 
-# Comando para correr el contenedor con docker-compose
-# version: '3.8'
-# services:
-#   vetsoft:
-#     image: vetsoft-ema:1.0
-#     ports:
-#       - "8000:8000"
-#     volumes:  
-#       - .:/vetsoft
-#     command: python manage.py runserver
-#     command: python manage.py migrate
-#     restart: always
-
-
-#Crear docker-compose.yml
-# version: '3.8'
-# services:
-#   vetsoft:
-#     build: .
-#     ports:
-#       - "8000:8000"
-#     volumes:
-#       - .:/vetsoft
-#     command: python manage.py runserver
-#     command: python manage.py migrate
-#     restart: always
-
